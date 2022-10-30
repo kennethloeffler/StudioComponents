@@ -28,6 +28,7 @@ function VerticalCollapsibleSection:render()
 			OnToggled = self.props.OnToggled,
 		}),
 		Content = not self.props.Collapsed and Roact.createElement(VerticalExpandingList, {
+			SortOrder = self.props.SortOrder or Enum.SortOrder.LayoutOrder,
 			LayoutOrder = 1,
 			BorderSizePixel = 0,
 		}, self.props[Roact.Children]),

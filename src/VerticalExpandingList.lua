@@ -36,7 +36,7 @@ function VerticalExpandingList:render()
 			BorderMode = Enum.BorderMode.Inset,
 		}, {
 			Layout = Roact.createElement("UIListLayout", {
-				SortOrder = Enum.SortOrder.LayoutOrder,
+				SortOrder = self.props.SortOrder or Enum.SortOrder.LayoutOrder,
 				FillDirection = Enum.FillDirection.Vertical,
 				Padding = UDim.new(0, self.props.Padding),
 				[Roact.Change.AbsoluteContentSize] = function(rbx)
